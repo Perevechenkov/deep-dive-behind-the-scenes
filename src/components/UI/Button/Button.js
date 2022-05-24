@@ -1,6 +1,9 @@
+import React from 'react';
+
 import classes from './Button.module.scss';
 
-export default function Button(props) {
+export default React.memo(function Button(props) {
+  console.log('btn');
   return (
     <button
       type={props.type || 'button'}
@@ -11,4 +14,4 @@ export default function Button(props) {
       {props.children}
     </button>
   );
-}
+});
